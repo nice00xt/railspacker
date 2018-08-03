@@ -2,14 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
-export const Hello = props => (
+export const HelloReact = props => (
   <div>Hello { props.name }!</div>
 )
 
-Hello.defaultProps = {
+HelloReact.defaultProps = {
   name: 'JuanX'
 }
 
-Hello.propTypes = {
+HelloReact.propTypes = {
   name: PropTypes.string
 }

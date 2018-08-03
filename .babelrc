@@ -11,9 +11,29 @@
         "useBuiltIns": true
       }
     ],
+    "es2015",
     "react"
   ],
   "plugins": [
+    [
+      "module-resolver", {
+        "root": ["./app/javascript/src"],
+        "extensions": [".js", ".jsx", ".es", ".es6", ".mjs"],
+        "alias": {
+          "test": "./app/javascript/test",
+          "assets": "./app/javascript/src/assets",
+          "underscore": "lodash"
+        },
+      "jest": {
+        "roots": ["./app/javascript"],
+        "moduleDirectories": [
+          "node_modules",
+          "app/javascript"
+        ],
+        "setupTestFrameworkScriptFile": "./app/javascript/test/setupTests.js"
+      }
+    }
+  ],
     "syntax-dynamic-import",
     "transform-object-rest-spread",
     [
